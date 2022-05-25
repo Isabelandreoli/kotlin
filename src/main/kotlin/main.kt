@@ -10,10 +10,59 @@ Ao instanciar a classe cliente na função exercicio.main(), não esquecer de co
 
 fun main(){
 
- val cadastro = Cliente(
-  "Isabela",
-  "Rua Caiubi, 123",
-  "99876-5432",
+    while (true){
 
- )
+     print("Digite o seu nome: ")
+     val nome = readln()
+
+     print("Digite o endereço: ")
+     val endereco = readln()
+
+     print("Digite o telefone: ")
+     val telefone = readln()
+
+     println("Informe o dia para entrega: ")
+     val dia = readln().toInt()
+
+     println("Informe a forma de pagamento: "+
+            "\n1.Dinheiro  -  2.Crédito  -  3.Débito")
+     val pag = readln().toInt()
+
+     try {
+         val cliente = Cliente(nome, endereco, telefone)
+
+         while (true){
+          println("DISK ENTREGA")
+          println("1 - Adicionar produtos"+
+                  "2 - Remover produtos" +
+                  "3 - Listar compras"+
+                  "4 - Conferir seus dados de pagamento"+
+                  "5 - Sair\n")
+
+          when(readln().toInt()){
+           1 -> {
+            println("Digite um produto para adicionar a lista de compras: ")
+            val compra = readln()
+            cliente.comprar(compra)
+           }
+           2 -> {
+            println("Digite um produto para remover da lista de compras: ")
+            val compra = readln()
+            cliente.excluir(compra)
+           }
+           3 -> {
+            cliente.listar()
+           }
+           4 ->
+            cliente.dados(dia, pag)
+           5 -> break
+
+           else -> println("Valor inválido")
+          }
+         }
+      break
+     }catch (e: Exception){
+      println(e.message)
+     }
+    }
 }
