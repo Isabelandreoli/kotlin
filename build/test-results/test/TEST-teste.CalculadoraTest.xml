@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="teste.CalculadoraTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2022-05-26T14:21:06" hostname="LAPTOP-KE7L4QBN" time="0.058">
+  <properties/>
+  <testcase name="subTest()" classname="teste.CalculadoraTest" time="0.036"/>
+  <testcase name="potTest()" classname="teste.CalculadoraTest" time="0.002"/>
+  <testcase name="raizTest()" classname="teste.CalculadoraTest" time="0.002"/>
+  <testcase name="diviTest()" classname="teste.CalculadoraTest" time="0.002"/>
+  <testcase name="multTest()" classname="teste.CalculadoraTest" time="0.003"/>
+  <testcase name="somaTest()" classname="teste.CalculadoraTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
